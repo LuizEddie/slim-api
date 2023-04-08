@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\map;
+
 if (PHP_SAPI != 'cli') {
     exit("RODAR VIA CLI");
 }
@@ -28,3 +31,19 @@ $schema->create($tabela, function($table){
     $table->string('fabricante', 60);
     $table->date("dt_criacao");
 });
+
+$db->table($tabela)->insert([
+    'titulo' => 'Smartphone Motorola Moto G6 32GB Dual Chip',
+    'descricao' => 'Android Oreo - 8.0 Tela 5.7" Octa-Core 1.8 Ghz 4G Câmera 12 + 5Mp (Dual Traseira) - índigo',
+    'preco' => 899.00,
+    'fabricante' => 'Motorola',
+    'dt_criacao' => '2019-10-22'
+]);
+
+$db->table($tabela)->insert([
+    'titulo' => 'Iphone X Cinza Especial 64GB',
+    'descricao' => 'Tela 5.8" IOS 12 4G Wi-fi Câmera 12MP - Apple',
+    'preco' => 4999.99,
+    'fabricante' => 'Apple',
+    'dt_criacao' => '2020-01-10'
+]);
