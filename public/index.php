@@ -26,6 +26,7 @@ $middleware = require __DIR__ . '/../src/middleware.php';
 $middleware($app);
 
 // Register routes
+$app->getContainer()->get('db');
 require __DIR__ . '/../src/routes.php';
 
 // Run app
