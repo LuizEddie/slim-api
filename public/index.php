@@ -22,8 +22,7 @@ $dependencies = require __DIR__ . '/../src/dependencies.php';
 $dependencies($app);
 
 // Register middleware
-$middleware = require __DIR__ . '/../src/middleware.php';
-$middleware($app);
+require __DIR__ . '/../src/middleware.php';
 
 // Register routes
 $app->getContainer()->get('db');
